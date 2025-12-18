@@ -46,6 +46,7 @@ def test_prediction_success(client: TestClient):
 
 
 def test_prediction_invalid_data(client: TestClient):
+    
     payload = [{
         "credit_score": "abc",  # Ошибка: должно быть int
         'geography': 'France',
