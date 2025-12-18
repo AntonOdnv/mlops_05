@@ -1,0 +1,10 @@
+version: "3.10.12"
+
+services:
+  mlops_05:
+    build: .
+    image: mlops_05
+    container_name: mlops_05
+
+    ports:
+      - "8000:8000"
