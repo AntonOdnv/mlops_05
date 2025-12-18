@@ -11,7 +11,7 @@ import pandas as pd
 import yaml 
 import logging
 import logging.config
-import numpy as np
+#import numpy as np
 
 # Читаем конфиг для логера
 with open("logger_cfg.yaml", 'r', encoding='utf-8') as f:
@@ -75,8 +75,9 @@ def simple():
     return "Ready to work"
 
 @app.post('/prediction')
-def prediction(data: Annotated[List[MLRequest], Body()], model=Depends(load_model)) -> MLResponse:
-   
+def prediction(data: Annotated[List[MLRequest], Body()], 
+               model=Depends(load_model)
+              ) -> MLResponse:
     # Восстанавливаем DataFrame из JSON
     try:
         logger.info("Загрузка внешних данных")

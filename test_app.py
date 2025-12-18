@@ -10,7 +10,7 @@ def client():
 
 
 def test_load_model_success():
- # Проверяем, что функция load_model возвращает загруженную модель
+   # Проверяем, что функция load_model возвращает загруженную модель
     loaded_model = joblib.load('model.joblib')
     assert loaded_model is not None
 
@@ -22,7 +22,7 @@ def test_root_get(client: TestClient):
 
 def test_prediction_success(client: TestClient):
     payload = [{
-        'credit_score': 585,
+        'credit_score': 538,
         'geography': 'France',
         'gender': 'Male',
         'age': 36,
