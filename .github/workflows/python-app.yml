@@ -51,5 +51,6 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
-        docker push antodnv/mlops_05:latest
+        docker tag mlops_05 antodnv/mlops_05
+        docker push antodnv/mlops_05
         needs: [Run pytest tests]
