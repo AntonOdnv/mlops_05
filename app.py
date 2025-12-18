@@ -11,6 +11,7 @@ import pandas as pd
 import yaml 
 import logging
 import logging.config
+import numpy as np
 
 # Читаем конфиг для логера
 with open("logger_cfg.yaml", 'r', encoding='utf-8') as f:
