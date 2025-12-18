@@ -53,4 +53,3 @@ jobs:
       run: |
         docker tag mlops_05 antodnv/mlops_05
         docker push antodnv/mlops_05
-        needs: [Run pytest tests]
